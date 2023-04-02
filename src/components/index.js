@@ -1,0 +1,8 @@
+export {default as Feed } from './Feed'
+export {default as Channels } from './Channels'
+export {default as Navbar } from './Navbar'
+export {default as Searched } from './Searched'
+export {default as VideoDetails } from './VideoDetails'
+export {default as SearchBar } from './SearchBar'
+export {default as SideBar } from './SideBar'
+export {default as Videos } from './Videos'
