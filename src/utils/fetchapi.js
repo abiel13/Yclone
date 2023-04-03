@@ -1,4 +1,4 @@
-import {axios} from "axios";
+// import {axios} from "axios";
 
 const Base = "https://youtube-v31.p.rapidapi.com";
 
@@ -7,14 +7,13 @@ const options = {
     maxResults: "50",
   },
   headers: {
-    "X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
+    "X-RapidAPI-Key": import.meta.env.VITE_API_TOKEN,
     "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
   },
 };
 
 
 export const fetchApi = async (url) =>{
-  const data = await axios.get(`${Base}${url}`, options)
-
+  const data = await axois.get(`${Base}${url}`, options)
   return data
 }
