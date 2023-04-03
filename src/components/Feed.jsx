@@ -1,19 +1,19 @@
 import { useState, useEffect, React } from "react";
 import { Stack, Box, Typography } from "@mui/material";
 import {SideBar, Videos} from '../components'
-// import { fetchApi  } from "../utils/fetchapi";
+import { fetchApi  } from "../utils/fetchapi";
 
 function Feed() {
 
   const [selectedCategory, setselectedCategory] = useState('New')
-  // const [Videos, setVideos] = useState([])
+  const [Videos, setVideos] = useState([])
 
-// useEffect(() =>{
-// fetchApi(`search?part=snippet&q=${selectedCategory}`).then(data => {
-//   console.log(data)
-//   setVideos(data.items)
-// })
-// }, [])
+useEffect(() =>{
+fetchApi(`search?part=snippet&q=${selectedCategory}`).then(data => {
+  console.log(data)
+  setVideos(data.items)
+})
+}, [])
 
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
@@ -32,7 +32,7 @@ Copyright Abiel @betilStudios
       Videos
           </span>
         </Typography>
-        {/* <Videos video={Videos}  /> */}
+        <Videos video={Videos}  />
       </Box>
     </Stack>
   );
