@@ -24,7 +24,7 @@ Copyright Abiel @betilStudios
 
       <Box p={2} sx={{overflow:'auto' , height:{sx:'auto' , md:'90vh' , flex:2,}}}>
         <Typography variant="h4" fontWeight='bold' mb={2}>
-    New      <span style={{color:'#f31503'}}>
+ {selectedCategory}     <span style={{color:'#f31503'}}>
       Videos
           </span>
         </Typography>
