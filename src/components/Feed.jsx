@@ -9,12 +9,14 @@ function Feed() {
   const [Video, setVideo] = useState([])
 
 useEffect(() =>{
-fetchApi(`search?part=snippet&q=${selectedCategory}`).then(data => {
+fetchApi(`search?part=snippet&q=${selectedCategory}`).then((data) => {
   setVideo(data.items)
   console.log(Video)
 })
+
 }, [])
 
+consle.log(Video)
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
