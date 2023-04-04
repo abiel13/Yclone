@@ -11,7 +11,7 @@ function Channels() {
 
   useEffect(() => {
  
-   console.log(  fetchApi(`channels?part=snippet&id=${id}`))
+   console.log(fetchApi(`channels?part=snippet&id=${id}`))
  console.log(fetchApi(`search?channelId=${id}&part=snippet&order=date`))
     
   }, [id]);
@@ -19,10 +19,10 @@ function Channels() {
   console.log(Videos , channelid)
 
   return <Box sx={{minHeight:'95vh'}}>
-    <Box>
+    {/* <Box>
       <div style={{color:'red' , height:'300px' , zIndex:'10'}} />
       <ChannelCard channel={channelid} mt='110px'/>
-    </Box>
+    </Box> */}
   </Box>;
 }
 
