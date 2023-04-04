@@ -4,7 +4,7 @@ const Base = "https://youtube-v31.p.rapidapi.com/";
 
 const options = {
   params: {
-    maxResults: "50",
+    maxResults: "150",
   },
   headers: {
     "X-RapidAPI-Key": import.meta.env.VITE_React_Token,

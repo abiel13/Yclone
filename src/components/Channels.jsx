@@ -10,13 +10,13 @@ function Channels() {
   const [Videos, setVideos] = useState([]);
 
   useEffect(() => {
- 
-   console.log(fetchApi(`channels?part=snippet&id=${id}`))
- console.log(fetchApi(`search?channelId=${id}&part=snippet&order=date`))
-    
+    fetchApi(`channels?part=snippet&id=${id}`).then((data) => console.log(data.items[0])
+    );
+    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => console.log(data.items)
+    );
   }, [id]);
 
-  console.log(Videos , channelid)
+ 
 
   return <Box sx={{minHeight:'95vh'}}>
     {/* <Box>
