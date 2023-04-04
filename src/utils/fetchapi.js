@@ -1,4 +1,4 @@
-// import { axios } from "axios";
+import { axios } from "axios";
 
 const Base = "https://youtube-v31.p.rapidapi.com/search";
 
@@ -7,7 +7,7 @@ const options = {
     maxResults: "50",
   },
   headers: {
-    "X-RapidAPI-Key": import.meta.env.VITE_API_TOKEN,
+    "X-RapidAPI-Key": import.meta.env.VITE_API_kEY,
     "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
   },
 };
