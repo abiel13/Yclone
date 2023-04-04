@@ -10,9 +10,9 @@ function Channels() {
   const [Videos, setVideos] = useState([]);
 
   useEffect(() => {
-    fetchApi(`channels?part=snippet&id=${id}`).then((data) => console.log(data.items[0])
+    fetchApi(`channels?part=snippet&id=${id}`).then((data) => console.log(data.data.items[0])
     );
-    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => console.log(data.items)
+    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => console.log(data.data.items)
     );
   }, [id]);
 
