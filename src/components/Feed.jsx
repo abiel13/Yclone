@@ -9,8 +9,7 @@ function Feed() {
   const [Video, setVideo] = useState([])
 
 useEffect(() =>{
-  console.log(fetchApi(`search?part=snippet&q=${selectedCategory}`))
-
+fetchApi(`search?part=snippet&q=${selectedCategory}`).then(data => setVideo(data.data.items))
 
 }, [selectedCategory])
 
