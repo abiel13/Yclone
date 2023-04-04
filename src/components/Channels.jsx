@@ -18,10 +18,12 @@ function Channels() {
     );
   }, [id]);
 
+  console.log(Videos , channelid)
+
   return <Box sx={{minHeight:'95vh'}}>
     <Box>
       <div style={{color:'red' , height:'300px' , zIndex:'10'}} />
-      <ChannelCard channel={channelid} />
+      <ChannelCard channel={channelid} mt='110px'/>
     </Box>
   </Box>;
 }

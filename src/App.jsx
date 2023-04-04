@@ -15,7 +15,7 @@ function App() {
         <Route path='/'  element={<Feed />} />
         <Route path='/video/:id'  element={<VideoDetails />} />
         <Route path='/search/:item'  element={<Searched />} />
-        <Route path='/channels/:id'  element={<Channels />} />
+        <Route path='/channel/:id'  element={<Channels />} />
       </Routes>
       </BrowserRouter>
     </Box>

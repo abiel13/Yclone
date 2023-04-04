@@ -18,7 +18,7 @@ xs:'100%', sm:'358px', md:'320px'
     {snippet.title.slice(0,60)}
   </Typography>
 </Link>
-<Link to={`/channels/${snippet.channelId}`}>
+<Link to={`/channel/${snippet.channelId}`}>
   <Typography variant='subtitle2' fontWeight='bold' sx={ {color:'gray'}}>
     {snippet.channelTitle.slice(0,60)}
   </Typography>
