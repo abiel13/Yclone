@@ -14,7 +14,7 @@ const options = {
 
 export const fetchApi = async (url) => {
   let items;
-  const dat = await fetch(`${Base}${url}`, options).then((res) => res.json()).then(data => console.log(data));
+  const dat = await fetch(`${Base}${url}`, options).then((res) => res.json()).then(data => console.log(data.items));
 
 
   return dat;
