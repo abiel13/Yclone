@@ -11,12 +11,11 @@ function Feed() {
 useEffect(() =>{
 fetchApi(`search?part=snippet&q=${selectedCategory}`).then((data) => {
   setVideo(data.items)
-  console.log(Video)
 })
 
 }, [])
 
-consle.log(Video)
+
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
@@ -34,7 +33,7 @@ Copyright Abiel @betilStudios
       Videos
           </span>
         </Typography>
-        {/* <Videos videos={Video} /> */}
+        <Videos videos={Video} />
       </Box>
     </Stack>
   );
