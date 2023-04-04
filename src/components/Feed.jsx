@@ -6,9 +6,12 @@ import { fetchApi  } from "../utils/fetchapi";
 function Feed() {
 
   const [selectedCategory, setselectedCategory] = useState('New')
+  const [Video, setVideo] = useState([])
 
 useEffect(() =>{
-fetchApi(`search?part=snippet&q=${selectedCategory}`)
+fetchApi(`search?part=snippet&q=${selectedCategory}`).then(data => {
+  setVideo(data.items)
+})
 }, [])
 
   return (
@@ -28,7 +31,7 @@ Copyright Abiel @betilStudios
       Videos
           </span>
         </Typography>
-        <Videos />
+        <Videos videos={Video} />
       </Box>
     </Stack>
   );
