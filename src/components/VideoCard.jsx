@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom'
 import {Card , CardContent , CardMedia} from '@mui/material'
 
 
-function VideoCard() {
+function VideoCard({ video :{ } }) {
   return (
-    <div>VideoCard</div>
+    <Card>
+      <Link>
+
+      </Link>
+    </Card>
   )
 }
 
