@@ -10,19 +10,19 @@ function Channels() {
   const [Videos, setVideos] = useState([]);
 
   useEffect(() => {
-    fetchApi(`channels?part=snippet&id=${id}`).then((data) => console.log(data.data.items[0])
+    fetchApi(`channels?part=snippet&id=${id}`).then((data) => setchannelid(data.data.items[0])
     );
-    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => console.log(data.data.items)
+    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => setVideos(data.data.items)
     );
   }, [id]);
 
  
 
   return <Box sx={{minHeight:'95vh'}}>
-    {/* <Box>
+    <Box>
       <div style={{color:'red' , height:'300px' , zIndex:'10'}} />
       <ChannelCard channel={channelid} mt='110px'/>
-    </Box> */}
+    </Box>
   </Box>;
 }
 
