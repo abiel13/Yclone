@@ -19,10 +19,10 @@ function Channels() {
  
 
   return <Box sx={{minHeight:'95vh'}}>
-    <Box>
+    {/* <Box>
       <div style={{color:'red' , height:'300px' , zIndex:'10'}} />
       <ChannelCard channel={channelid} mt='110px'/>
-    </Box>
+    </Box> */}
   </Box>;
 }
 
