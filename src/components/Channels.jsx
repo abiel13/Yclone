@@ -10,9 +10,9 @@ function Channels() {
   const [Vid, setVid] = useState([]);
 
   useEffect(() => {
-    fetchApi(`channels?part=snippet&id=${id}`).then((data) => setchannelid(data.data.items[0])
+    fetchApi(`channels?part=snippet&id=${id}`).then((data) => setchannelid(data.items[0])
     );
-    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => setVid(data.data.items)
+    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => setVid(data.items)
     );
   }, [id]);
 
