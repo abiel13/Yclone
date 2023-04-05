@@ -8,7 +8,6 @@ function ChannelCard({ channel }) {
       sx={{
         borderRadius: "20px",
         display: "flex",
-        flexDirection:'column',
         justifyContent: "center",
         alignItems: "center",
         width: { xs: "100%", sm: "356px", md: "320px" },
@@ -20,6 +19,7 @@ function ChannelCard({ channel }) {
         <CardContent
           sx={{
             display: "flex",
+            flexDirection:'column',
             justifyContent: "center",
             textAlign: "center",
             color: "black",
