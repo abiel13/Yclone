@@ -26,7 +26,7 @@ function ChannelCard({ channel }) {
           }}
         >
           <CardMedia
-            image={channel?.?snippet?.thumbnails?.high?.url}
+            image={channel?.snippet?.thumbnails?.high?.url}
             alt={channel.snippet.title}
             sx={{ borderRadius: "50%", width: "180px", height: "180px" }}
           />
