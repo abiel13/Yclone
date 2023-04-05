@@ -12,7 +12,7 @@ function Channels() {
   useEffect(() => {
     fetchApi(`channels?part=snippet&id=${id}`).then((data) => setchannelid(data.data.items[0])
     );
-    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => setVideos(data.data.items)
+    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => setVid(data.data.items)
     );
   }, [id]);
 
