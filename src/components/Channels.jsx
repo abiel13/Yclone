@@ -15,7 +15,7 @@ function Channels() {
       setCan(data.data.items);
       let chan = data.data.items;
       console.log(chan);
-      console.log(c);
+      console.log(Can);
     });
     fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) =>
       console.log(data)
