@@ -18,7 +18,7 @@ function Channels() {
       console.log(c);
     });
     fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) =>
-      // console.log(data)
+      console.log(data)
     );
   }, [id]);
 
