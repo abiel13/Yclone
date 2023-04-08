@@ -36,7 +36,7 @@ function Channels() {
   return (
     <Box sx={{ minHeight: "95vh" }}> 
     channels page
-      <Videos video={state.video} />
+      {/* <Videos video={state.video} /> */}
      
     </Box>
   );
