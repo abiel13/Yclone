@@ -6,26 +6,31 @@ import { fetchApi } from "../utils/fetchapi";
 
 function Channels() {
   const { id } = useParams();
-  const [Can, setCan] = useState([]);
-  const [Vid, setVid] = useState([]);
-
-
+  const [state, dispatch] = useReducer(
+    (state, action) => {
+      switch (action.type) {
+        case "Videos":
+          return { ...state, [state.video]: action.payload };
+        case "Channels":
+          return { ...state, [state.channels]: action.payload };
+      }
+    },
+    {
+      video: [],
+      channels: [],
+    }
+  );
 
   useEffect(() => {
     fetchApi(`channels?part=snippet&id=${id}`).then((data) => {
-      console.log(data.data.items); 
-      let chan = data.data.items;
-      console.log(chan)
-       setCan(chan);
- 
-      console.log(Can , 'hand');
+      console.log(data.data.items);
+   dispatch({type:'videos' , payload:[data.data.items]})
+
     });
 
-    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) =>{
-      console.log(data)
-      console.log('cnah' , Can)
-    }
-    );
+    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => {
+   console.log('hello')
+    });
   }, [id]);
 
   return (
