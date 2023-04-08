@@ -32,12 +32,12 @@ function Channels() {
     });
   }, [id]);
 
-   console.log(state.video , state.channels)
+   console.log( state.channels)
   return (
     <Box sx={{ minHeight: "95vh" }}> 
 <Box>
   <div style={{background:'red' , height:'300px'}} />
-  
+  <ChannelCard channel={state.channels} />
   </Box>  
     </Box>
   );
