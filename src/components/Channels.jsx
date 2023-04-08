@@ -14,9 +14,10 @@ function Channels() {
       console.log(data.data.items); 
       let chan = data.data.items;
        setCan(chan);
-      console.log(chan);
-      console.log(Can);
+ 
+      console.log(Can , 'hand');
     });
+
     fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) =>
       console.log(data)
     );
