@@ -36,8 +36,8 @@ function Channels() {
   return (
     <Box sx={{ minHeight: "95vh" }}> 
 <Box>
-  <div style={{background:'red' , height:'300px'}} />
-  <ChannelCard channel={state.channels} />
+  {/* <div style={{background:'red' , height:'300px'}} /> */}
+  <ChannelCard channel={state.channels[0]} />
   </Box>  
     </Box>
   );
