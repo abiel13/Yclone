@@ -24,12 +24,11 @@ function Channels() {
   useEffect(() => {
     fetchApi(`channels?part=snippet&id=${id}`).then((data) => {
       console.log(data.data.items);
-   dispatch({type:'Channels' , payload:[data.data.items]})
-
+   dispatch({type:'Channels' , payload:[data.data.items[0]]})
     });
 
     fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => {
-
+      dispatch({type:'Videos' , payload:[data.data.items]})
     });
   }, [id]);
 
