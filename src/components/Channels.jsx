@@ -9,17 +9,22 @@ function Channels() {
   const [Can, setCan] = useState([]);
   const [Vid, setVid] = useState([]);
 
+
+
   useEffect(() => {
     fetchApi(`channels?part=snippet&id=${id}`).then((data) => {
       console.log(data.data.items); 
       let chan = data.data.items;
+      console.log(chan)
        setCan(chan);
  
       console.log(Can , 'hand');
     });
 
-    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) =>
+    fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) =>{
       console.log(data)
+      console.log('cnah' , Can)
+    }
     );
   }, [id]);
 
