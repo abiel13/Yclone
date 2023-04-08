@@ -16,10 +16,11 @@ function Channels() {
     );
   }, [id]);
 
- console.log(channelid , Vid)
+
 
   return <Box sx={{minHeight:'95vh'}}>
-    <Videos video={Vid} />
+    {/* <Videos video={Vid} /> */}
+    channels page
   </Box>;
 }
 
