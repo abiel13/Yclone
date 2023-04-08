@@ -10,9 +10,9 @@ function Channels() {
     (state, action) => {
       switch (action.type) {
         case "Videos":
-          return { ...state, [state.video]: action.payload };
+          return { ...state, video:action.payload };
         case "Channels":
-          return { ...state, [state.channels]: action.payload };
+          return { ...state, channels:action.payload };
       }
     },
     {
