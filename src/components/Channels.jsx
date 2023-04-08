@@ -6,18 +6,19 @@ import { fetchApi } from "../utils/fetchapi";
 
 function Channels() {
   const { id } = useParams();
-  const [c, setc] = useState([]);
+  const [Can, setCan] = useState([]);
   const [Vid, setVid] = useState([]);
 
   useEffect(() => {
-    fetchApi(`channels?part=snippet&id=${id}`).then((data) =>{
-      console.log(data.data.items)
-      setc(data.data.items)
-    console.log(c)
-    }
-    );
+    fetchApi(`channels?part=snippet&id=${id}`).then((data) => {
+      console.log(data.data.items);
+      setCan(data.data.items);
+      let chan = data.data.items;
+      console.log(chan);
+      console.log(c);
+    });
     fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) =>
-      console.log(data)
+      // console.log(data)
     );
   }, [id]);
 
