@@ -29,7 +29,7 @@ function Channels() {
     });
 
     fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => {
-   console.log(state.videos , state.channels)
+   console.log(state.video , state.channels)
     });
   }, [id]);
 
