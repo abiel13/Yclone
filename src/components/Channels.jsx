@@ -24,15 +24,16 @@ function Channels() {
   useEffect(() => {
     fetchApi(`channels?part=snippet&id=${id}`).then((data) => {
       console.log(data.data.items);
-   dispatch({type:'Channels' , payload:[data.items]})
+   dispatch({type:'Channels' , payload:[data.data.items]})
 
     });
 
     fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => {
-   console.log(state.video , state.channels)
+
     });
   }, [id]);
 
+   console.log(state.video , state.channels)
   return (
     <Box sx={{ minHeight: "95vh" }}>
       {/* <Videos video={Vid} /> */}
