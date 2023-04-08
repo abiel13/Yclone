@@ -35,9 +35,10 @@ function Channels() {
    console.log(state.video , state.channels)
   return (
     <Box sx={{ minHeight: "95vh" }}> 
-    channels page
-      {/* <Videos video={state.video} /> */}
-     
+<Box>
+  <div style={{background:'red' , height:'300px'}} />
+  
+  </Box>  
     </Box>
   );
 }
