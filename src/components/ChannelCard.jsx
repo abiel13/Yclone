@@ -27,10 +27,10 @@ function ChannelCard({ channel }) {
         >
           <CardMedia
             image={channel?.snippet?.thumbnails?.high?.url}
-            alt={channel.snippet.title}
+            alt={channel?.snippet?.title}
             sx={{ borderRadius: "50%", width: "180px", height: "180px" }}
           />
-          <Typography variant="h6">{channel.snippet.title}</Typography>
+          <Typography variant="h6">{channel?.snippet?.title}</Typography>
         </CardContent>
       </Link>
     </Box>
