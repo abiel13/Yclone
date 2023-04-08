@@ -11,9 +11,9 @@ function Channels() {
 
   useEffect(() => {
     fetchApi(`channels?part=snippet&id=${id}`).then((data) => {
-      console.log(data.data.items);
-      setCan(data.data.items);
+      console.log(data.data.items); 
       let chan = data.data.items;
+       setCan(chan);
       console.log(chan);
       console.log(Can);
     });
