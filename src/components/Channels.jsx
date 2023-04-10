@@ -32,7 +32,7 @@ function Channels() {
     });
   }, [id]);
 
-   console.log( state.video[0])
+   
   return (
     <Box sx={{ minHeight: "95vh" }}> 
 <Box>
