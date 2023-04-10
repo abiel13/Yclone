@@ -1,6 +1,6 @@
 import { React, useReducer, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { Videos, ChannelCard } from "./";
 import { fetchApi } from "../utils/fetchapi";
 
