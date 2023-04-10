@@ -23,7 +23,7 @@ function Channels() {
 
   useEffect(() => {
     fetchApi(`channels?part=snippet&id=${id}`).then((data) => {
-      console.log(data.data.items);
+      
    dispatch({type:'Channels' , payload:[data.data.items[0]]})
     });
 
@@ -31,6 +31,7 @@ function Channels() {
       dispatch({type:'Videos' , payload:[data.data.items]})
     });
   }, [id]);
+console.log(state.video)
 
    
   return (
@@ -38,7 +39,7 @@ function Channels() {
 <Box>
   <div style={{background:'black' , height:'200px'}} />
   <ChannelCard channel={state.channels[0]} mt='-130px' />
-  <Videos videos={state.video[0]} />
+  {/* <Videos videos={state.video} /> */}
   </Box>  
     </Box>
   );
