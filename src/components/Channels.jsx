@@ -31,7 +31,7 @@ function Channels() {
       dispatch({type:'Videos' , payload:[data.data.items]})
     });
   }, [id]);
-console.log(state.video)
+console.log(state.video[0])
 
    
   return (
