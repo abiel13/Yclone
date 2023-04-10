@@ -38,7 +38,7 @@ function Channels() {
 <Box>
   <div style={{background:'black' , height:'300px'}} />
   <ChannelCard channel={state.channels[0]} mt='110px' />
-  <Videos videos={state.video[0]} />
+  {/* <Videos videos={state.video[0]} /> */}
   </Box>  
     </Box>
   );
