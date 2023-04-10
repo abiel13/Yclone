@@ -8,7 +8,7 @@ function Videos({ videos }) {
     <Stack direction='row' justifyContent='start' gap={2} flexWrap='wrap'>
       {
         videos.map((item,idx) =>{
-          console.log(item)
+       
           return( <Box key={idx}>
             {item?.id?.videoId && <VideoCard  video={item} />}
             {item?.id?.channelId && <ChannelCard channel={item} />}
