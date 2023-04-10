@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card, Box, CardContent, CardMedia, Typography } from "@mui/material";
 
-function ChannelCard({ channel ,mt }) {
+function ChannelCard({ channel , mt }) {
   return (
     <Box
       sx={{
@@ -13,7 +13,7 @@ function ChannelCard({ channel ,mt }) {
         width: { xs: "100%", sm: "356px", md: "320px" },
         height:'326px',
         margin:'auto',
-        marginBottom:mt
+        marginTop:mt
       }}
     >
       <Link to={`/channel/${channel?.id?.channelId}`}>
