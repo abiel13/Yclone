@@ -42,9 +42,8 @@ function Channels() {
   <div style={{background:'black' , height:'200px'}} />
   <ChannelCard channel={state.channels[0]} mt='-130px' />
 <Box display='flex' p={2}>
-  <Box sx={{mr:{sm:'100px'}}}>
+  <Box sx={{mr:{sm:'100px'}}} />
 <Videos videos={state?.video} />
-  </Box>
   </Box> 
 
   </Box>  
