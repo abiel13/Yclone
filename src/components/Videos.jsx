@@ -3,7 +3,7 @@ import {Stack , Box} from '@mui/material'
 import {ChannelCard , VideoCard} from './'
 
 function Videos({ videos , direction }) {
-if (!video?.length) return '...Loading'
+if (!videos?.length) return '...Loading'
 
   return (
     <Stack direction={direction || 'row'} justifyContent='start' gap={2} flexWrap='wrap'>
