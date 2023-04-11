@@ -28,7 +28,7 @@ function Channels() {
     });
 
     fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => {
-      dispatch({type:'Videos' , payload:[data.data.items[0]]})
+      dispatch({type:'Videos' , payload:[data.data.items]})
     });
   }, [id]);
 console.log(state.video[0])
