@@ -7,7 +7,7 @@ import { fetchApi } from "../utils/fetchapi";
 
 function VideoDetails() {
   const [Video, setVideo] = useState(null);
-const [Loading, setLoading] = useState(true)
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,12 +17,10 @@ const [Loading, setLoading] = useState(true)
     fetchApi(`search?part=snippet&relatedToVideoId=${id}&type=video`).then((data) =>
     setVideo(data.data.items)
   );
-  setLoading(false)
   }, [id]);
 
-return
-{Loading?  (<div>Loading...</div>) :  (
-    <Box minHeight="95vh">
+
+  return ( <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box flex={1}>
           <Box sx={{ width: "100%", position: "sticky", top: "86px" }}>
@@ -60,7 +58,7 @@ return
         </Box>
       </Stack>
     </Box>
-  );}
+  );
 }
 
 export default VideoDetails;
