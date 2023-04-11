@@ -18,12 +18,16 @@ fetchApi(`search?part=snippet&q=${item}`).then(data => setVideo(data.data.items)
   return ( <
     Box p={2} sx={{overflow:'auto' , height:{sx:'auto' , md:'90vh' , flex:2,}}}>
         <Typography variant="h4" fontWeight='bold' mb={2}>
-        Search Results for 
-    <span style={{color:'#f31503'}}>
-      {item}
+        Search Results for  
+     <span style={{color:'#f31503'}}>
+       {item}
           </span>
         </Typography>
-        <Videos videos={Video} />
+        <Box display='flex' p={2}>
+        <Box sx={{mr:{sm:'100px'}}} />
+      <Videos videos={Video} />
+        </Box> 
+      
       </Box>
     
   );
