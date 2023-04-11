@@ -41,10 +41,10 @@ function VideoDetails() {
               </Link>
 
               <Stack direction='row' gap='20px' alignItems={'center'}>
-              <Typography variant='h5'>
+              <Typography variant='h6'>
                   {parseInt(Video?.statistics?.viewCount).toLocaleString()} views
                 </Typography> 
-                 <Typography variant='h5'>
+                 <Typography variant='h6'>
                   {parseInt(Video?.statistics?.likeCount).toLocaleString()} likes
                 </Typography>
 
