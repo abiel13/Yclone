@@ -22,9 +22,9 @@ const [Related, setRelated] = useState(null)
   if(!Video?.snippet) return '...loading'
 
   return ( 
-  <Box minHeight="95vh" width='100vw' px={2}>
+  <Box minHeight="95vh" width='100vw' px={1}>
       <Stack direction={{ xs: "column", sm: "row" , gap:'10px' }}>
-        <Box flex={1}>
+        <Box flex={0.9}>
           <Box sx={{ width: "100%", position: "sticky", top: "86px", }}>
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
@@ -58,7 +58,7 @@ const [Related, setRelated] = useState(null)
             </Stack>
           </Box>
         </Box>
-        <Box flex={{xs:1 , md:0.3}} alignItems='center' justifyContent='center' px={2} py={{md:1 , xs:5}}>
+        <Box flex={{xs:1 , md:0.3}} alignItems='center' justifyContent='center' px={1} py={{md:1 , xs:5}}>
           <Typography variant='h6'mb={2}>Related Videos</Typography>
 <Videos videos={Related} direction='column' />
         </Box>
