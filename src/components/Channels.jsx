@@ -41,7 +41,7 @@ console.log(state.video[0])
   <ChannelCard channel={state.channels[0]} mt='-130px' />
   <Stack direction='row' justifyContent='start' gap={2} flexWrap='wrap'>
       {
-        state.video.map((item,idx) =>{
+        state?.video?.map((item,idx) =>{
           console.log(item)
           return( <Box key={idx}>
             {item?.id?.videoId && <VideoCard  video={item} />}
