@@ -23,7 +23,7 @@ const [Related, setRelated] = useState(null)
 
   return ( 
   <Box minHeight="95vh" width='100vw'>
-      <Stack direction={{ xs: "column", sm: "row" }}>
+      <Stack direction={{ xs: "column", sm: "row" , gap:'10px' }}>
         <Box flex={1}>
           <Box sx={{ width: "100%", position: "sticky", top: "86px", }}>
             <ReactPlayer
@@ -58,7 +58,7 @@ const [Related, setRelated] = useState(null)
             </Stack>
           </Box>
         </Box>
-        <Box flex={1}>
+        <Box flex={0.4} alignItems='center' justifyContent='center' px={2} py={{md:1 , xs:5}}>
           <Typography variant='h6'mb={2}>Related Videos</Typography>
 <Videos videos={Related} direction='column' />
         </Box>
