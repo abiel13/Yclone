@@ -12,7 +12,8 @@ function Navbar() {
         top: "0px",
         justifyContent: "space-between",
         borderBottom:'.7px solid #777',
-        background:'white'
+        background:'white',
+        zIndex:200
       }}
       direction="row"
       alignItems={"center"}
