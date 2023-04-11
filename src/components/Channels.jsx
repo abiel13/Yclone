@@ -28,7 +28,7 @@ function Channels() {
     });
 
     fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => {
-      dispatch({type:'Videos' , payload:[data.data.items]})
+      dispatch({type:'Videos' , payload:[data.data.items[0]]})
     });
   }, [id]);
 console.log(state.video[0])
@@ -42,7 +42,7 @@ console.log(state.video[0])
   <Stack direction='row' justifyContent='start' gap={2} flexWrap='wrap'>
       {
         state?.video?.map((item,idx) =>{
-          console.log(item)
+          console.log('hi' , item)
           return( <Box key={idx}>
             {item?.id?.videoId && <VideoCard  video={item} />}
             {item?.id?.channelId && <ChannelCard channel={item} />}
