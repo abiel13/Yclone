@@ -25,7 +25,7 @@ const [Related, setRelated] = useState(null)
   <Box minHeight="95vh" maxWidth='100vw' >
       <Stack direction={{ xs: "column", sm: "row"   }}>
         <Box flex={0.9}>
-          <Box sx={{ width: "100%", position: "sticky", top: "86px", }}>
+          <Box sx={{ width: "100%", position: "sticky", top: "56px", }}>
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
               controls
