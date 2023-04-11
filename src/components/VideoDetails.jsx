@@ -7,7 +7,7 @@ import { fetchApi } from "../utils/fetchapi";
 
 function VideoDetails() {
   const [Video, setVideo] = useState(null);
-const [Related, setRelated] = useState(second)
+const [Related, setRelated] = useState(null)
   const { id } = useParams();
 
   useEffect(() => {
