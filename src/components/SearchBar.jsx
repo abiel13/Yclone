@@ -1,11 +1,11 @@
-import React from "react";
-import { useNavigate, useState } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Paper, IconButton } from "@mui/material";
 import { SearchOutlined } from "@mui/icons-material";
 
 function SearchBar() {
   const navigate = useNavigate();
-  const [search, setSearch] = useState("a");
+  const [search, setSearch] = useState("");
   function handleSubmit(e) {
     e.preventDefault();
     if (search) {
@@ -14,6 +14,7 @@ function SearchBar() {
     }
   }
 
+  
   return (
     <Paper
       component="form"
