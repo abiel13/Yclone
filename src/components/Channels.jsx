@@ -30,7 +30,7 @@ function Channels() {
 
     fetchApi(`search?channelId=${id}&part=snippet&order=date`).then((data) => {
       console.log('array' , data.data.items)
-      dispatch({type:'Videos' , payload:[data.data.items]})
+      dispatch({type:'Videos' , payload:data.data.items})
     });
   }, [id]);
 
