@@ -12,7 +12,7 @@ function VideoCard({ video :{ id: { videoId } , snippet } }) {
 xs:'100%', sm:'358px', md:'320px' 
 } , height:180 }} />
       </Link>
-<CardContent sx={{height:'106px', background:'#dfdfdf'}}>
+<CardContent sx={{height:'106px', width: {xs:'100%', sm:'358px', md:'320px' , } , background:'#dfdfdf'}}>
 <Link to={`/video/${videoId}`}>
   <Typography variant='subtitle1' fontWeight='bold' sx={ {color:'black'}}>
     {snippet.title.slice(0,60)}
