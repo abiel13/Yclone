@@ -22,8 +22,8 @@ const [Related, setRelated] = useState(null)
   if(!Video?.snippet) return '...loading'
 
   return ( 
-  <Box minHeight="95vh" width='100vw' px={1}>
-      <Stack direction={{ xs: "column", sm: "row" , gap:'10px' }}>
+  <Box minHeight="95vh" width='100vw' >
+      <Stack direction={{ xs: "column", sm: "row" , px:{'5px'}  }}>
         <Box flex={0.9}>
           <Box sx={{ width: "100%", position: "sticky", top: "86px", }}>
             <ReactPlayer
@@ -58,7 +58,7 @@ const [Related, setRelated] = useState(null)
             </Stack>
           </Box>
         </Box>
-        <Box flex={{xs:1 , md:0.3}} alignItems='center' justifyContent='center'  py={{md:1 , xs:5}}>
+        <Box flex={{xs:1 , md:0.2}} alignItems='center' justifyContent='center' px={'5px'} py={{md:1 , xs:5}}>
           <Typography variant='h6'mb={2}>Related Videos</Typography>
 <Videos videos={Related} direction='column' />
         </Box>
