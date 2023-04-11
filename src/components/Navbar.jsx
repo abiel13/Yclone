@@ -18,7 +18,7 @@ function Navbar() {
       alignItems={"center"}
       p={2}
     >
-      <Link>
+      <Link to='/'>
         <div style={{ display: "flex", alignItems: "center" }}>
           <img src={logo} height={35} alt="" />{" "}
           <span style={{ fontWeight: "bolder", fontFamily: "sans-serif" }}>
