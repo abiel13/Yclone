@@ -14,6 +14,9 @@ function VideoDetails() {
     fetchApi(`videos?part=snippet,statistics&id=${id}`).then((data) =>
       setVideo(data.data.items[0])
     );
+    fetchApi(`search?part=snippet&relatedToVideoId=${id}&type=video`).then((data) =>
+    setVideo(data.data.items)
+  );
   }, [id]);
 
   if(!Video?.snippet){
