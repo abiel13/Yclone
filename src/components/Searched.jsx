@@ -1,9 +1,32 @@
-import React from 'react'
+import { useState, useEffect, React } from "react";
+import { Box, Typography } from "@mui/material";
+import {Videos} from './'
+import { fetchApi  } from "../utils/fetchapi";
+import { useParams } from "react-router-dom";
 
 function Searched() {
-  return (
-    <div>Searched</div>
-  )
+
+ const  { item } = useParams();
+  const [Video, setVideo] = useState([])
+
+useEffect(() =>{
+fetchApi(`search?part=snippet&q=${item}`).then(data => setVideo(data.data.items))
+
+}, [item])
+
+
+  return ( <
+    Box p={2} sx={{overflow:'auto' , height:{sx:'auto' , md:'90vh' , flex:2,}}}>
+        <Typography variant="h4" fontWeight='bold' mb={2}>
+        Search Results for 
+    <span style={{color:'#f31503'}}>
+      {item}
+          </span>
+        </Typography>
+        <Videos videos={Video} />
+      </Box>
+    
+  );
 }
 
-export default Searched
+export default Searched;
