@@ -41,7 +41,9 @@ function Channels() {
 <Box>
   <div style={{background:'black' , height:'200px'}} />
   <ChannelCard channel={state.channels[0]} mt='-130px' />
-  <Stack direction='row' justifyContent='start' gap={2} flexWrap='wrap'>
+<Videos videos={state?.video} />
+
+  {/* <Stack direction='row' justifyContent='start' gap={2} flexWrap='wrap'>
       {
         state?.video?.map((item,idx) =>{
           console.log('hi' , item)
@@ -51,7 +53,7 @@ function Channels() {
           </Box>)}
         )
       }
-    </Stack>
+    </Stack> */}
   </Box>  
     </Box>
   );
