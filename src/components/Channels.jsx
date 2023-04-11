@@ -41,19 +41,12 @@ function Channels() {
 <Box>
   <div style={{background:'black' , height:'200px'}} />
   <ChannelCard channel={state.channels[0]} mt='-130px' />
+<Box display='flex' p={2}>
+  <Box sx={{mr:{sm:'100px'}}}>
 <Videos videos={state?.video} />
+  </Box>
+  </Box> 
 
-  {/* <Stack direction='row' justifyContent='start' gap={2} flexWrap='wrap'>
-      {
-        state?.video?.map((item,idx) =>{
-          console.log('hi' , item)
-          return( <Box key={idx}>
-            {item?.id?.videoId && <VideoCard  video={item} />}
-            {item?.id?.channelId && <ChannelCard channel={item} />}
-          </Box>)}
-        )
-      }
-    </Stack> */}
   </Box>  
     </Box>
   );
