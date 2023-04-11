@@ -32,6 +32,11 @@ function ChannelCard({ channel , mt }) {
             sx={{ borderRadius: "50%", width: "180px", height: "180px" }}
           />
           <Typography variant="h6">{channel?.snippet?.title}</Typography>
+          {channel?.statistics?.subscriberCount && (
+            <Typography>
+              {parseInt(channel?.statistics?.subscriberCount).toLocaleString()} subscribers
+            </Typography>
+          ) }
         </CardContent>
       </Link>
     </Box>
