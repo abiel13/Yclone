@@ -5,10 +5,9 @@ import { SearchOutlined } from "@mui/icons-material";
 
 function SearchBar() {
   const navigate = useNavigate();
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("a");
   function handleSubmit(e) {
     e.preventDefault();
-
     if (search) {
       navigate(`/search/${search}`);
       setSearch("");
