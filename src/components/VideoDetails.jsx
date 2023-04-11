@@ -16,7 +16,7 @@ function VideoDetails() {
     );
   }, [id]);
 
-  if(!video?.snippet){
+  if(!Video?.snippet){
     return(
       <div>Loading</div>
     )
@@ -38,7 +38,7 @@ function VideoDetails() {
             <Stack
               direction="row"
               justifyContent={"space-between"}
-              sx={{ color: "black", py: "1", px: "2" }}
+              sx={{ color: "black", py: "5px", px: "10px" }}
             >
               <Link to={`/channel/${Video?.snippet?.channelId}`}>
               <Typography variant={{sm:'subtitle1' , md:'h5'}}>
@@ -55,7 +55,7 @@ function VideoDetails() {
                 </Typography>
 
               </Stack>
-              
+
             </Stack>
           </Box>
         </Box>
