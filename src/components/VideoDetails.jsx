@@ -16,6 +16,12 @@ function VideoDetails() {
     );
   }, [id]);
 
+  if(!video?.snippet){
+    return(
+      <div>Loading</div>
+    )
+  }
+
   return (
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
@@ -41,14 +47,15 @@ function VideoDetails() {
               </Link>
 
               <Stack direction='row' gap='20px' alignItems={'center'}>
-              <Typography variant='h6'>
+              <Typography variant='subtitle1'>
                   {parseInt(Video?.statistics?.viewCount).toLocaleString()} views
                 </Typography> 
-                 <Typography variant='h6'>
+                 <Typography variant='subtitle1'>
                   {parseInt(Video?.statistics?.likeCount).toLocaleString()} likes
                 </Typography>
 
               </Stack>
+              
             </Stack>
           </Box>
         </Box>
