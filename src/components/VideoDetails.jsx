@@ -58,7 +58,7 @@ const [Related, setRelated] = useState(null)
             </Stack>
           </Box>
         </Box>
-        <Box flex={{xs:1 , md:0.3}} alignItems='center' justifyContent='center' px={1} py={{md:1 , xs:5}}>
+        <Box flex={{xs:1 , md:0.3}} alignItems='center' justifyContent='center'  py={{md:1 , xs:5}}>
           <Typography variant='h6'mb={2}>Related Videos</Typography>
 <Videos videos={Related} direction='column' />
         </Box>
