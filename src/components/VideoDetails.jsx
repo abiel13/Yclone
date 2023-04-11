@@ -24,6 +24,7 @@ function VideoDetails() {
       <div>Loading</div>
     )
   }
+  else{}
 
   return (
     <Box minHeight="95vh">
