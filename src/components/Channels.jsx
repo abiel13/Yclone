@@ -1,7 +1,7 @@
 import { React, useReducer, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Box, Stack } from "@mui/material";
-import { Videos, ChannelCard } from "./";
+import { Videos, ChannelCard , VideoCArd } from "./";
 import { fetchApi } from "../utils/fetchapi";
 
 function Channels() {
