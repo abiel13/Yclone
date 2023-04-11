@@ -20,7 +20,7 @@ fetchApi(`search?part=snippet&q=${item}`).then(data => setVideo(data.data.items)
         <Typography variant="h4" fontWeight='bold' mb={2}>
         Search Results for  
      <span style={{color:'#f31503'}}>
-       {item}
+      {' '} {item}
           </span>
         </Typography>
         <Box display='flex' p={2}>
