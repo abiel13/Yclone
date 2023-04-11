@@ -24,9 +24,7 @@ function VideoDetails() {
       <div>Loading</div>
     )
   }
-  else{}
-
-  return (
+  else{ return (
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box flex={1}>
@@ -65,7 +63,9 @@ function VideoDetails() {
         </Box>
       </Stack>
     </Box>
-  );
+  );}
+
+ 
 }
 
 export default VideoDetails;
