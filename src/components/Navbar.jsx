@@ -14,7 +14,6 @@ function Navbar() {
         borderBottom: ".7px solid #777",
         background: "white",
         zIndex: 200,
-        gap: "1rem",
         padding: { md: "1rem", xs: "1rem" },
       }}
       direction="row"
