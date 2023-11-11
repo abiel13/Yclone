@@ -14,7 +14,6 @@ function SearchBar() {
     }
   }
 
-  
   return (
     <Paper
       component="form"
@@ -22,10 +21,12 @@ function SearchBar() {
       sx={{
         display: "flex",
         borderRadius: 20,
-        mr: { sm: 5 },
+        mr: { xs: 5, md: 3 },
         border: "1px solid #e4e5e3",
         pl: 2,
+        boxShadow: "inset 0px 0px 5px rgba(0,0,0,0.3)",
       }}
+      elevation={0}
     >
       <input
         className="search-bar"
@@ -34,6 +35,7 @@ function SearchBar() {
         }}
         value={search}
         placeholder="Search...."
+        style={{ background: "transparent" }}
       />
       <IconButton type={"button"} sx={{ p: "5px", color: "red" }}>
         <SearchOutlined />
